@@ -1,0 +1,422 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
+
+* {
+  -webkit-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Varialbe define */
+:root {
+  --primary-color: #ffa323;
+  --secondary-color: #f41f31;
+  --white-color: #fff;
+  --black-color: #0a0a0a;
+  --bg-gray: #f5f5f5;
+
+  /* text color variable */
+  --text-primary: #ffa323;
+  --text-secondary: #f41f31;
+  --text-white: #fff;
+  --text-black: #0a0a0a;
+  --text-d-gray: #545454;
+  --text-gray: #aba8b0;
+  --text-light-gray: #484848;
+
+  /* Font Family */
+  --primary-font: "Poppins", sans-serif;
+  --secondary-font: "Nunito Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: var(--text-primary);
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+/* Custom CSS */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--primary-font);
+  font-size: 100%;
+  font-weight: 400;
+}
+::-webkit-scrollbar {
+  width: 6.8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--white-color);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+}
+h1 {
+  font-size: 57.1424px;
+  font-weight: 800;
+  margin-bottom: 32px;
+  color: var(--text-white);
+  text-transform: capitalize;
+}
+h2 {
+  font-size: 45.7136px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--text-black);
+  text-transform: capitalize;
+}
+
+h3 {
+  font-size: 29.7136px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--text-black);
+  text-transform: capitalize;
+}
+h4 {
+  font-size: 27.4288px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--text-gray);
+  max-width: 75%;
+}
+p {
+  color: var(--text-d-gray);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+  font-family: var(--secondary-font);
+}
+span {
+  display: block;
+  font-size: 32px;
+  font-weight: 600;
+  font-family: var(--secondary-font);
+  margin-bottom: 17.1424px;
+  position: relative;
+  color: var(--text-primary);
+}
+span::after {
+  position: absolute;
+  left: 0;
+  bottom: 2.2864px;
+  content: "";
+  background: var(--secondary-color);
+  width: 32px;
+  height: 2.2864px;
+}
+.main-btn {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 29.7136px;
+  font-weight: 400;
+  border-radius: 5.7136px;
+  padding: 11.4288px 22.8576px;
+  text-align: center;
+  border: 2.2864px solid transparent;
+  position: relative;
+  z-index: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.main-btn::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.style-1 {
+  background-color: var(--secondary-color);
+  color: var(--text-white);
+}
+
+.style-1:hover {
+  background-color: var(--primary-color);
+}
+
+.main-btn:hover::after {
+  visibility: visible;
+  opacity: 1;
+}
+
+.wrapper {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+/* Header CSS */
+.header-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.header-top,
+.nav-wrap {
+  background: var(--black-color);
+}
+.header-top .container {
+  border-bottom: 1.1424px dotted var(--text-light-gray);
+  padding: 16px 0;
+}
+
+.header-top .contact-item {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.header-top .contact-item i {
+  font-size: 20.5712px;
+  color: var(--text-primary);
+  margin-right: 9.1424px;
+}
+.header-top .contact-item p,
+.header-top .contact-item a {
+  color: var(--text-white);
+}
+.nav-wrap .nav-item {
+  padding: 0 10px;
+  transition: all 200ms linear;
+}
+
+.navbar-toggler {
+  color: var(--text-white);
+}
+
+.navbar-toggler:focus {
+  outline: unset;
+  border: unset;
+  box-shadow: unset;
+}
+.nav-wrap .nav-link {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: var(--text-white);
+  letter-spacing: 1px;
+}
+.nav-wrap .nav-link:hover {
+  color: var(--text-primary);
+}
+/* Change navbar styling on scroll [use in js] */
+.navbar .scroll-on {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--black-color);
+  box-shadow: 0 2px 28px 0 rgb(0, 0, 0, 0.09);
+  transition: all 0.15s ease-in-out 0s;
+}
+/* Top-Banner */
+.top-banner {
+  width: 100%;
+  background: url("../imgs/bg/bg-1.jpg") no-repeat center;
+  background-size: cover;
+  padding: 285.7136px 0 150px;
+}
+
+/* Services Section */
+
+.service-section {
+  width: 100%;
+  height: 100%;
+  background: url("../imgs/bg/bg-2.jpg") no-repeat center;
+  background-size: cover;
+  text-align: center;
+}
+
+.service-section span::after {
+  left: 42%;
+}
+.service-section .service-cards {
+  margin-top: 102.8576px;
+}
+.service-section .card {
+  padding: 85.7136px 5.7136px 11.4288px;
+  border-radius: 5.7136px;
+  border: 0;
+  -webkit-box-shadow: 0 0 17.1424px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 17.1424px rgba(0, 0, 0, 0.1);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.service-section .card img {
+  position: absolute;
+  bottom: 200px;
+  left: 25%;
+  transform: translate(-50% -50%);
+  background: var(--bg-gray);
+  border-radius: 50%;
+  padding: 17.1424px;
+  width: 140px;
+  height: 140px;
+}
+.service-section .card:hover {
+  background: var(--secondary-color);
+}
+
+.service-section .card:hover h3,
+.service-section .card:hover p {
+  color: var(--text-white);
+}
+
+/* Features Section */
+.feature-section {
+  width: 100%;
+  height: 100%;
+  background: url("../imgs/bg/bg-3.jpg") no-repeat center;
+  background-size: cover;
+}
+.feature-section span::after {
+  left: 38%;
+}
+.feature-section h2 {
+  color: var(--text-white);
+}
+.feature-section .card {
+  box-shadow: 0 0 17.1424px rgb(0, 0, 0, 0.1);
+  border: 0;
+  border-radius: 0;
+}
+.feature-section .card .feature-img {
+  overflow: hidden;
+}
+.feature-section .card .feature-img img {
+  object-fit: cover;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  overflow: hidden;
+}
+.feature-section .card .price {
+  font-size: 22.8576px;
+  font-weight: 500;
+  margin-top: 11.4288px;
+  color: var(--text-black);
+}
+
+.feature-section .card .price del {
+  color: var(--text-gray);
+  margin-left: 8px;
+}
+
+.feature-section .card:hover h3 {
+  color: var(--text-secondary);
+}
+
+.feature-section .card:hover img {
+  -webkit-transform: scale(1.15) rotate(5deg);
+  transform: scale(1.15) rotate(5deg);
+}
+/*Delivery Section  */
+.delivery-section {
+  width: 100%;
+  height: 100%;
+  background: url("../imgs/bg/bg-4.jpg") no-repeat center;
+  background-size: cover;
+}
+
+/*Download App Section  */
+.app-section {
+  width: 100%;
+  height: 100%;
+  background: url("../imgs/bg/bg-5.jpg") no-repeat center;
+  background-size: cover;
+}
+.app-section h2,
+.app-section p {
+  color: var(--text-white);
+}
+.app-section h4:hover {
+  color: var(--text-primary);
+  cursor: pointer;
+}
+.download-app-btn img {
+  max-width: 189.7136px;
+  width: 100%;
+}
+/*Newsletter Section  */
+
+.newsletter {
+  width: 100%;
+  height: 100%;
+  background: url("../imgs/bg/bg-6.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.newsletter span::after {
+  left: 35%;
+}
+
+.newsletter .form-group {
+  position: relative;
+  box-shadow: 0 0 17.1424px rgb(0, 0, 0, 0.1);
+}
+.newsletter .form-group input {
+  width: 100%;
+  height: 68.5712px;
+  background: var(--white-color);
+  color: var(--text-gray);
+  padding: 22.8576px 11.4288px;
+  border: none;
+}
+.newsletter .form-group input:focus {
+  border: 0;
+  outline: none;
+  box-shadow: none;
+}
+
+.newsletter .form-group button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  border: none;
+  padding: 23px;
+  background: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.newsletter .form-group button i {
+  color: var(--text-white);
+  font-size: 24px;
+}
+
+/* footer Section */
+.footer {
+  background: var(--black-color);
+}
+.footer .footer-link {
+  color: var(--text-white);
+  padding: 20px;
+  font-size: 16px;
+}
+.footer a {
+  font-size: 24px;
+  color: var(--text-white);
+  padding: 0 16px;
+}

@@ -1,0 +1,64 @@
+/* Mobile menu adjustment  */
+
+@media (max-width: 500px) {
+  .nav-wrap {
+    background-color: black;
+  }
+  .header-top {
+    display: none;
+  }
+}
+
+/* tablet menu adjustment */
+
+@media (max-width: 830px) {
+  .nav-wrap {
+    background-color: black;
+  }
+  .header-top {
+    background-color: #ffa323;
+  }
+  .header-top .contact-item p,
+  .header-top .contact-item a,
+  .header-top .contact-item i {
+    color: var(--text-white);
+  }
+}
+
+/* Mobile services section adjustment  */
+
+@media (max-width: 500px) {
+  .service-section .card {
+    margin-bottom: 20px;
+  }
+  .service-section .card img {
+    position: absolute;
+    bottom: 180px;
+    left: 33%;
+    transform: translate(-50% -50%);
+    background: var(--bg-gray);
+    border-radius: 50%;
+    padding: 13px;
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* tablet services section adjustment */
+
+@media (max-width: 830px) {
+  .service-section .card {
+    margin-bottom: 20px;
+  }
+  .service-section .card img {
+    position: absolute;
+    bottom: 170px;
+    left: 33%;
+    transform: translate(-50% -50%);
+    background: var(--bg-gray);
+    border-radius: 50%;
+    padding: 13px;
+    width: 130px;
+    height: 130px;
+  }
+}
